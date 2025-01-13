@@ -1,0 +1,24 @@
+<p-dropdown [options]="Countries"  [ngModel]="country" optionLabel="name"
+(onChange)="onDropDownChange($event)"></p-dropdown>
+
+
+<p-card header="Mismo componente">
+  <p class="m-0">
+    {{this.store.seletedCountry.name()}}
+  </p>
+</p-card>
+
+<p-card header="Otro componente">
+
+<app-comp2></app-comp2>
+</p-card>
+
+<p-button label="Otra página" icon="pi pi-link" size="large" [routerLink]="['/3']" />
+
+<br> <br>
+
+
+
+<p-card header="Frutas">
+<app-fruit></app-fruit>
+</p-card>

@@ -1,0 +1,52 @@
+<p-toolbar styleClass="mb-4 gap-2">
+  <ng-template pTemplate="left">
+
+    <label for="fruitname" class="mr-2">Fruta:</label>
+    <input id="fruitname" type="text" pInputText [(ngModel)]="inputName" class="mr-2"/>
+
+
+    <label for="fruitprice" class="mr-2">Precio:</label>
+    <p-inputNumber
+      id="fruitprice"
+      mode="currency"
+      currency="USD"
+      locale="en-US"
+      [(ngModel)]="inputPrice"
+      class="mr-2"/>
+    <p-button icon="pi pi-plus" (onClick)="addFruit()"/>
+  </ng-template>
+
+  <ng-template pTemplate="right">
+
+  </ng-template>
+</p-toolbar>
+
+
+<p-table [value]="fruits()" [tableStyle]="{ 'min-width': '50rem' }">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Fruta</th>
+      <th>Precio</th>
+      <th style="width: 5rem"></th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-aFruit>
+    <tr>
+      <td>{{ aFruit.name }}</td>
+      <td>{{ aFruit.price |currency }}</td>
+      <td>
+        <p-button
+          icon="pi pi-minus" (onClick)="deleteFruit(aFruit)">
+        </p-button>
+      </td>
+    </tr>
+  </ng-template>
+
+  <ng-template pTemplate="summary">
+    <div class="flex align-items-center justify-content-between">
+      Total: {{ total() |currency }}
+    </div>
+  </ng-template>
+</p-table>
+
+
