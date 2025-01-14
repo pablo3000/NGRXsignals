@@ -27,7 +27,7 @@
           },
 
           "options": {
-            "outputPath": "dist/ngrx-signals",
+            "outputPath": "dist/NGRXsignals",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
