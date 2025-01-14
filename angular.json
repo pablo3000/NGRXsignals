@@ -22,7 +22,7 @@
             "options": {
               "repo": "https://github.com/pablo3000/NGRXsignals.git",
               "branch": "gh-pages",
-              "dir": "dist/NGRXsignals/browser"
+              "dir": "dist/ngrx-signals/browser"
             }
           },
 
